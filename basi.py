@@ -92,4 +92,7 @@ while i < 5 :
 print #va a capo dopo aver finito il ciclo
 
 
+import random #modulo
+for i in range(3):
+	print random.random() #modulo.funzione
 

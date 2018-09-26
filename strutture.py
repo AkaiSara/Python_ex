@@ -118,18 +118,54 @@ print matrix[0][1]
 
 
 
-
-
 #tuple [immutabili]
+tupla = ('a','b','c') #le parentesi non sono necessarie, ma rendono il codice piu visibile
+tupla = ('a',) #necessaria la virgola altrimenti viene considerata come un carattere
 
-#dizionari [mutabili]
+t2 = ('1','2','3')
+print tupla, t2
+tupla ,t2 = t2, tupla
+print tupla, t2
+
+#metodi: append, extend, reverse, sort
 
 
 
+#dizionari(array di tipo con indici di tipo) [mutabili]
+diz = {} #dizionario vuoto
+diz['uno'] = '1' #assegnazione
+diz['due'] = '2' #nomedizionario[chiave] = elemento
+print diz
 
+diz = {'u':'1' , 'd':'2', 't':'3'}
+print diz
+print diz['u']
 
+#del per eliminare elementi, len per sapere la dimensione del dizionario
+del diz['u']
+print diz
+print len(diz) #numero di coppie chiave elemento
 
+#metodi 
+print diz.keys() #chiavi
+print diz.values() #elementi
+print diz.items() #chiavi ed elementi
 
+print diz.has_key('d') #guarda se esiste una chiave e ritorna un bool
 
+copia = diz.copy() #clone
+print copia
+alias = diz #alias
+
+conta = diz.items()
+conta.sort()
+print "conta", conta
+
+#matrici
+matrix = {(0,0) : 2, (0,1): 3, (1,1): 1}
+print matrix[(0,0)] #primo elemento
+
+#matrix[1,0] non esiste nel dizionario
+print matrix.get((1,0), 0) #la chiave non e' presente nel dizionario
 
 
